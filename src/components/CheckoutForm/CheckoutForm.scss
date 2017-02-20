@@ -1,0 +1,130 @@
+@import "../../theme/forms.scss";
+
+.checkoutForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.checkoutFormContainer {
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0;
+  @media screen and (max-width: $width-mobile) {
+    margin: 0 auto 40px;
+  }
+}
+.checkoutBlockForm {
+  border: 1px solid #FE0000;
+  border-radius: 3px;
+  @media screen and (max-width: $width-mobile) {
+      border-radius: 0;
+  }
+}
+.checkoutGroup {
+  position: relative;
+  &:last-of-type {
+      .checkoutInput {
+          border-bottom: none;
+      }
+  }
+}
+.checkoutCheckbox {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  @media screen and (max-width: $width-mobile) {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
+.checkoutInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #8E8E93;
+  font-family: $font-family-nexa-light;
+  text-align: center;
+  height: 58px;
+  padding: 0 20px;
+  border-bottom: 1px solid #FE0000;
+  border-radius: 0;
+  outline: none;
+  &::-ms-clear {
+      display: none;
+  }
+  &:focus {
+    &::placeholder {
+      color: transparent;
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+      height: 40px;
+  }
+}
+
+.checkoutDoubleGroup {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  .checkoutGroup {
+      width: 50%;
+      .checkoutInput {
+          border-bottom: 0;
+      }
+      &:first-of-type {
+          border-right: 1px solid #FE0000;
+      }
+  }
+}
+
+.inputEye {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  @media screen and (max-width: $width-mobile) {
+    top: 15px;
+  }
+}
+.errorWrap {
+  position: relative;
+  height: 120px;
+  padding: 10px 0;
+}
+.inputError {
+  position: relative;
+  background-color: #fcb5b5;
+  &::placeholder {
+      color: red
+  }
+  &::-ms-clear {
+      display: none;
+  }
+}
+.inputErrorText {
+  position: relative;
+  color: red;
+  margin-top: 10px;
+  font-family: $font-family-nexa-light;
+  font-size: 12px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.checkoutBtn {
+  @extend .redBtn;
+  align-self: flex-end;
+}
+
+.checkoutWrapPayinfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

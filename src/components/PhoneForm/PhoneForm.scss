@@ -1,0 +1,105 @@
+@import "../../theme/forms.scss";
+
+.checkoutForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.checkoutFormContainer {
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+  font-size: 0;
+  margin: 0 auto 60px;
+  @media screen and (max-width: $width-mobile) {
+    margin: 0 auto 30px;
+  }
+  .formGroup {
+    margin-bottom: 0;
+  }
+}
+.checkoutGroup {
+  position: relative;
+}
+.checkoutInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #8E8E93;
+  font-family: $font-family-nexa-light;
+  text-align: center;
+  height: 58px;
+  padding: 0 20px;
+  border-bottom: 1px solid #FE0000;
+  border-radius: 0;
+  outline: none;
+  &::-ms-clear {
+      display: none;
+  }
+  &:focus {
+    &::placeholder {
+      color: transparent;
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+      height: 40px;
+  }
+}
+
+.errorWrap {
+  position: relative;
+  height: 120px;
+  padding: 10px 0;
+}
+.inputError {
+  position: relative;
+  background-color: #fcb5b5;
+  &::placeholder {
+      color: red
+  }
+  &::-ms-clear {
+      display: none;
+  }
+}
+.inputErrorText {
+  position: relative;
+  color: red;
+  margin-top: 10px;
+  font-family: $font-family-nexa-light;
+  font-size: 12px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.checkoutBtn {
+  @extend .redBtn;
+  align-self: center;
+}
+
+.checkoutWrapPayinfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .totalAmount {
+    margin: 30px 0;
+    padding-top: 25px;
+    @media screen and (max-width: $width-mobile) {
+      margin: 15px 0;
+      padding-top: 15px;
+      padding-bottom: 0;
+    }
+    &:first-child {
+      margin-top: 0
+    }
+    &:last-of-type {
+      margin-bottom: 60px;
+      @media screen and (max-width: $width-mobile) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

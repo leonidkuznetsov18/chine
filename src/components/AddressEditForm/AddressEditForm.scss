@@ -1,0 +1,38 @@
+@import "../../theme/forms.scss";
+
+.addressEditForm {
+  position: relative;
+  margin: auto;
+  max-width: 370px;
+  width: 100%;
+  @media screen and (max-width: $width-mobile) {
+    padding: 0 15px;
+    margin-top: auto;
+    margin-bottom: 50px;
+  }
+  .formGroup {
+    .inputGroup {
+      textarea {
+        height: 100px;
+        resize: vertical;
+      }
+    }
+  }
+}
+
+.formIconMarker {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 0;
+  line-height: 1;
+  svg {
+    fill: $bgcolor-red;
+    width: 20px;
+    height: 28px;
+  }
+  @media screen and (max-width: $width-mobile) {
+    right: 10px;
+  }
+}

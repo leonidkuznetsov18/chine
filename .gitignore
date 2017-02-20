@@ -1,0 +1,18 @@
+.idea/
+node_modules/
+dist/
+*.iml
+webpack-assets.json
+webpack-stats.json
+npm-debug.log
+.DS_Store
+# static/uploads/
+api/migrations/sql/*.txt
+sdk-node.log
+api/config/config.json
+/static/uploads/products/
+/static/uploads/modifiers/
+/static/uploads/extras/
+/static/uploads/splash_screen/
+bower_components/
+coverage/

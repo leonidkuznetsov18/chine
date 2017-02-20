@@ -1,0 +1,33 @@
+{
+  "name": "tso-universal-app",
+  "description": "Universal nodejs application",
+  "main": "bin/server.js",
+  "authors": [
+    "S-PRO Company <info@s-pro.io>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "isomorphic",
+    "universal",
+    "webpack",
+    "express",
+    "hot",
+    "reloading",
+    "react-hot-reloader",
+    "redux",
+    "babel"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bringg-sdk": "bringg-js-sdk#^1.0.5"
+  }
+}

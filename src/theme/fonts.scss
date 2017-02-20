@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'NexaLight';
+    src: url('../../static/fonts/NexaLight.eot');
+    src: url('../../static/fonts/NexaLight.eot?#iefix') format('embedded-opentype'),
+         url('../../static/fonts/NexaLight.woff') format('woff'),
+         url('../../static/fonts/NexaLight.woff2') format('woff2'),
+         url('../../static/fonts/NexaLight.ttf') format('truetype'),
+         url('../../static/fonts/NexaLight.svg#NexaLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NexaBold';
+    src: url('../../static/fonts/NexaBold.eot');
+    src: url('../../static/fonts/NexaBold.eot?#iefix') format('embedded-opentype'),
+         url('../../static/fonts/NexaBold.woff') format('woff'),
+         url('../../static/fonts/NexaBold.woff2') format('woff2'),
+         url('../../static/fonts/NexaBold.ttf') format('truetype'),
+         url('../../static/fonts/NexaBold.svg#NexaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BigNoodleTitling';
+    src: url('../../static/fonts/BigNoodleTitling.eot');
+    src: url('../../static/fonts/BigNoodleTitling.eot?#iefix') format('embedded-opentype'),
+         url('../../static/fonts/BigNoodleTitling.woff') format('woff'),
+         url('../../static/fonts/BigNoodleTitling.woff2') format('woff2'),
+         url('../../static/fonts/BigNoodleTitling.ttf') format('truetype'),
+         url('../../static/fonts/BigNoodleTitling.svg#BigNoodleTitling') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

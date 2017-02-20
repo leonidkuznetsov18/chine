@@ -1,0 +1,217 @@
+@import "../../theme/forms.scss";
+
+.heroHeader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  background-color: white;
+  opacity: 0;
+  animation: fadeIn ease 1;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 0.7s;
+  backface-visibility: hidden;
+  transition: all .8s ease;
+  .addressLine {
+    margin-bottom: 0;
+    background-color: #F2F2F2;
+  }
+}
+.heroHeaderClose {
+  opacity: 0;
+  transform: translateY(-100%);
+  z-index: 0;
+  visibility: hidden;
+}
+
+.heroHeaderBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  animation: zoomOut ease 1;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 0.7s;
+  backface-visibility: hidden;
+  transform: scale(1.3) translate3d(0,0,0);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+  }
+}
+
+.heroHeaderWrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+.heroHeaderLogo {
+  position: relative;
+  display: block;
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: 135px;
+  animation: up ease 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  svg {
+    width: 267px;
+    height: 234px;
+    font-size: 0;
+    .logo-fill {
+      fill: $bgcolor-red;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    margin-bottom: 35px;
+    svg {
+      width: 133px;
+      height: 117px;
+    }
+  }
+}
+
+.heroHeaderWrapText {
+  position: relative;
+  opacity: 0;
+  animation: up ease 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-delay: 2.5s;
+  text-align: center;
+  @media screen and (max-width: $width-mobile) {
+    padding: 0 20px;
+  }
+}
+.heroHeaderText {
+  position: relative;
+  font-size: 26px;
+  color: white;
+  text-transform: uppercase;
+  font-family: $font-family-nexa-bold;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 18px;
+  }
+  .brStyle {
+    display: none;
+    @media screen and (max-width: $width-mobile) {
+      display: block;
+    }
+  }
+}
+
+.currentlyClosedInfoWrap {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.currentlyClosedTitle {
+  position: relative;
+  font-family: $font-family-big-nodle-titling;
+  font-size: 72px;
+  letter-spacing: 2px;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 36px;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+}
+.currentlyClosedSubTitle {
+  position: relative;
+  font-family: $font-family-nexa-light;
+  font-size: 48px;
+  line-height: 1.4;
+  color: white;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 24px;
+  }
+}
+.currentlyClosedBottomWrap {
+  position: relative;
+}
+.currentlyClosedRedRow {
+  background-color: $bgcolor-red;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @media screen and (max-width: $width-mobile) {
+    height: 64px;
+  }
+}
+.currentlyClosedRedRowTitle {
+  font-size: 27px;
+  color: white;
+  font-family: $font-family-big-nodle-titling;
+  font-size: 52px;
+  letter-spacing: 1px;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 27px;
+  }
+}
+
+@keyframes up {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+    100% {
+      opacity: 1;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      visibility: visible;
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  100% {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}

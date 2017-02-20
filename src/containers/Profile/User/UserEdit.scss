@@ -1,0 +1,56 @@
+@import "../../../theme/variables.scss";
+
+.userEdit {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  @media screen and (max-width: $width-mobile) {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
+.userEditWrap {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: auto;
+  width: 100%;
+  @media screen and (max-width: $width-mobile) {
+    padding: 0 15px;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+  }
+}
+
+.registerLinks {
+  text-align: center;
+  margin-top: 50px;
+  @media screen and (max-width: $width-mobile) {
+    margin-top: 25px;
+  }
+  a {
+    font-size: 13pt;
+    color: $bgcolor-red;
+    display: inline-block;
+    border-bottom: 1px solid $bgcolor-red;
+    margin-bottom: 25px;
+    text-decoration: none;
+    transition: all .25s;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: $width-mobile) {
+      font-size: 10pt;
+      margin-bottom: 25px;
+    }
+  }
+}

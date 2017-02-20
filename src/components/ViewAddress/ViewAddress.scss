@@ -1,0 +1,79 @@
+@import "../../theme/viewCard.scss";
+
+
+
+.carryout {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 20px;
+  @media screen and (max-width: $width-mobile) {
+      margin-top: 5px;
+      margin-left: 0;
+  }
+  .carryoutIcon {
+    font-size: 0;
+    margin-right: 10px;
+    svg {
+      width: 13px;
+      height: 19px;
+      @media screen and (max-width: $width-mobile) {
+        width: 6px;
+        height: 9px;
+      }
+    }
+  }
+  .viewCarryOut {
+    font-size: 16px;
+    color: $bgcolor-red;
+    font-family: $font-family-nexa-light;
+    @media screen and (max-width: $width-mobile) {
+      font-size: 9px;
+    }
+  }
+}
+
+.viewAddress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 100%;
+  font-size: 27px;
+  color: #000;
+  text-align: left;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 1px;
+    width: 300px;
+    background-color: #BEBEBE;
+    @media screen and (max-width: $width-mobile) {
+      width: 100px;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    font-size: 14px;
+  }
+}
+
+.viewAddressName {
+  display: block;
+  margin-left: 20px;
+  @media screen and (max-width: $width-mobile) {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,1 @@
+export SetNewPassword from './SetNewPassword';

@@ -1,0 +1,32 @@
+@import "../../theme/variables.scss";
+
+.addressLine {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #DBDBDB;
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 74px;
+  @media screen and (max-width: $width-mobile) {
+    margin-bottom: 20px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+.addressText {
+  position: relative;
+  font-size: 27px;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #f1bebe;
+  font-family: $font-family-nexa-light;
+  cursor: pointer;
+  cursor: hand;
+  transition: all .25s;
+  &:hover {
+    border-color: transparent;
+  }
+  @media screen and (max-width: $width-mobile) {
+    font-size: 14px;
+  }
+}

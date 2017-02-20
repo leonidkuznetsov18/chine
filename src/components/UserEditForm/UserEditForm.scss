@@ -1,0 +1,9 @@
+@import "../../theme/forms.scss";
+
+.userEditForm {
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

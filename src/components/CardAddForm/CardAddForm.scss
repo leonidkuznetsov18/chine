@@ -1,0 +1,28 @@
+@import "../../theme/forms.scss";
+
+.cardAddForm {
+  position: relative;
+  margin: auto;
+  max-width: 370px;
+  width: 100%;
+  @media screen and (max-width: $width-mobile) {
+    padding: 0 15px;
+    margin-top: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  font-size: 0;
+  @media screen and (max-width: $width-mobile) {
+    top: 15px;
+  }
+  svg {
+    width: 14px;
+    height: 14px;
+    fill: #fe0000;
+  }
+}

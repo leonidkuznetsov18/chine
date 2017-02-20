@@ -1,0 +1,91 @@
+.cartBox {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+  background-image: url(../../../static/uploads/sprite_cart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  animation-name: cart;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(9);
+  animation-fill-mode: forwards;
+  &:active,
+  &:focus,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+  }
+  @media screen and (max-width: $width-mobile) {
+    background-image: url(../../../static/uploads/sprite_cart_white.svg);
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    animation-name: cartMobile;
+ }
+}
+
+.cartBoxCounter {
+  padding-top: 1.5px;
+  padding-left: 1px;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateY(50%);
+  background-color: $bgcolor-red;
+  font-family: $font-family-nexa-bold;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  animation-name: cartCounter;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  @media screen and (max-width: $width-mobile) {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    top: 2px;
+    right: -2px;
+    background-color: white;
+    color: $bgcolor-red;
+    font-size: 12px;
+    animation: none;
+    opacity: 1;
+    transform: none;
+ }
+}
+
+@keyframes cartMobile {
+  100% {
+    background-position: -315px 0;
+  }
+}
+
+@keyframes cart {
+  100% {
+    background-position: -450px 0;
+  }
+}
+
+@keyframes cartCounter {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

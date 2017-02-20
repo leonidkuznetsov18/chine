@@ -1,0 +1,507 @@
+@import "../../theme/foodTable.scss";
+
+.productModify {
+  position: relative;
+  margin-bottom: 100px;
+  @media screen and (max-width: $width-mobile) {
+    margin-bottom: 50px;
+  }
+  .productSpicinessSlider {
+    position: relative;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  .wrapProductSpicinessSlider {
+    position: relative;
+  }
+  .whiteArea{
+    background-color: #fff;
+  }
+  .productInfo{
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    @media screen and (max-width: $width-mobile) {
+      padding-top: 15px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .productInfoWrap {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .backgroundWhite {
+    background-color: white;
+  }
+
+  .wrapContains {
+    position: relative;
+    padding-top: 50px;
+    @media screen and (max-width: $width-mobile) {
+      padding-top: 25px;
+    }
+  }
+  .spicinessScale {
+    position: absolute;
+    display: flex;
+    right: 0;
+    left: 0;
+    margin-top: 8px;
+    span {
+      position: relative;
+      width: 25%;
+      font-size: 24px;
+      display: block;
+      white-space: nowrap;
+      @media screen and (max-width: $width-mobile) {
+        font-size: 12px;
+      }
+      &:nth-child(1) {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:nth-child(3) {
+        text-align: center;
+      }
+      &:nth-child(4) {
+        text-align: right;
+      }
+    }
+  }
+
+  .productImage {
+    position: relative;
+    height: 768px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -80px;
+    @media screen and (max-width: $width-mobile) {
+      margin-top: -40px;
+      margin: 0 0px 6px 0px;
+      height: 171px;
+      top: 5px;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    .stickyHeader{
+      .header {
+        background: transparent !important;
+      }
+    }
+
+  }
+
+  .aboutBlock {
+    margin-top: 20px;
+    @media screen and (max-width: $width-mobile) {
+      margin-top: 10px;
+    }
+    .productDescription{
+      margin-top: 20px;
+      margin-bottom: 56px;
+      text-align: center;
+      font-size: 18pt;
+      @media screen and (max-width: $width-mobile) {
+        font-size: 10pt;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+
+  .paramsBlock {
+    @media screen and (max-width: $width-mobile) {
+      height: 86px;
+      margin-bottom: 0px;
+    }
+    margin-bottom: 258px;
+    > div {
+      height:  148px;
+    }
+    .productParams {
+      color: $bgcolor-red;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      p {
+        font-size: 13pt;
+      }
+      img {
+        @media screen and (max-width: $width-mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .modifiersContainer{
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 90px;
+    @media screen and (max-width: $width-mobile) {
+      margin: 0 auto;
+    }
+  }
+
+  .switchesContainer {
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 70px;
+    @media screen and (max-width: $width-mobile) {
+      margin: 0 auto 25px;
+    }
+  }
+
+  .proteinBlock {
+       position: relative;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       padding: 0 25px;
+       @media screen and (max-width: $width-mobile) {
+         padding: 0 12px;
+         margin-bottom: 20px;
+         width: 60px;
+         line-height: 15px;
+       }
+      .protein {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background-color: $bgcolor-red;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        margin-bottom: 20px;
+        background-position: center center;
+        transition: all .25s;
+        + span {
+          color : $bgcolor-red;
+        }
+        &:hover {
+            background-color: $bgcolor-red;
+            + span {
+              color : $bgcolor-red;
+            }
+        }
+        @media screen and (max-width: $width-mobile) {
+          width: 39px;
+          height: 39px;
+          margin-bottom: 10px;
+        }
+      }
+      .unactiveProtein {
+        @extend .protein;
+        background-color: #8e8e93;
+        cursor: pointer;
+        + span {
+          color : black;
+        }
+        &:hover {
+          background-color: #8e8e93;
+        }
+      }
+      span {
+        font-size: 18px;
+        margin: 0;
+        text-align: center;
+        transition: all .25s;
+        @media screen and (max-width: $width-mobile) {
+          font-size: 12px;
+        }
+      }
+    }
+  .switches {
+    margin: 0 20px 20px 0;
+    display: flex;
+    width: 280px;
+    background-color: transparent;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid $bgcolor-red;
+    overflow: hidden;
+    outline: none;
+    user-select: none;
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      outline: none;
+    }
+    &:last-child {
+      margin: 0
+    }
+    @media screen and (max-width: $width-mobile) {
+      height: 39px;
+      margin: 0 0 10px 0;
+    }
+    >div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      text-align: center;
+      color: $bgcolor-red;
+      font-size: 16pt;
+      @media screen and (max-width: $width-mobile) {
+        font-size: 10pt;
+      }
+    }
+
+    .switchActive{
+      background-color:$bgcolor-red;
+      color: white;
+    }
+    .switchBoolean{
+      cursor: pointer;
+    }
+  }
+  .fixedOrder {
+    position: relative;
+    margin-bottom: 45px;
+    @media screen and (max-width: $width-mobile) {
+      margin-bottom: 25px;
+    }
+  }
+  .button {
+    height: 56px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1;
+    padding: 0 5px 7px;
+    outline: none;
+    font-family: $font-family-big-nodle-titling;
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      outline: none;
+    }
+    @media screen and (max-width: $width-mobile) {
+      height: 51px;
+      font-size: 16px;
+      padding: 0 5px 3px;
+    }
+  }
+  .buyButton {
+    @extend .button;
+    color: #fff;
+    border: 1px solid transparent;
+    max-width: 370px;
+    width: 100%;
+    display: block;
+    background-color: $bgcolor-red;
+    transition: background, color, border-color, .25s;
+    &:hover {
+      background-color: transparent;
+      color: $bgcolor-red;
+      border-color: $bgcolor-red;
+    }
+    &:active{
+        background: $bgcolor-red;
+        color: #fff;
+      }
+    @media screen and (max-width: $width-mobile) {
+      height: 40px;
+      margin: 0 auto;
+      text-align: center;
+      transition: none;
+    }
+
+  }
+  .productName {
+    color: #000;
+    font-size: 33px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: $font-family-big-nodle-titling;
+    line-height: 43px;
+    @media screen and (max-width: $width-mobile) {
+      line-height: 15px;
+      font-size: 17px;
+    }
+  }
+  .productSubName {
+    font-size: 24px;
+    color: #8e8e93;
+    text-align: center;
+    margin-bottom:0;
+    @media screen and (max-width: $width-mobile) {
+      font-size: 11px;
+      margin-top: 7px;
+      margin-bottom: 10px;
+    }
+  }
+  .sliderMain {
+    border-radius: 4px;
+    height: 44px;
+    background: linear-gradient(to right,  #ffffff 0%, $bgcolor-red 100%);
+    @media screen and (max-width: $width-mobile) {
+      height: 22px;
+    }
+    .handleBlock {
+      position: relative;
+      .sliderHandle {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        height: 32px;
+        width: 64px;
+        border-radius: 5px;
+        margin-top: 21px;
+        background: url("./handle-arrow.png") no-repeat center center black ;
+        @media screen and (max-width: $width-mobile) {
+          border-radius: 2px;
+          margin-top: 11px;
+          width: 33px;
+          background-size: 48%;
+          height: 16px;
+        }
+
+      }
+    }
+  }
+  .stickyBtnProduct  {
+    z-index: 9999;
+    &.sticky {
+      .buyButton {
+        top: 12px;
+        transform: translate(-50%, 0);
+        @media screen and (max-width: $width-mobile) {
+          top: 7px;
+          width: 150px;
+          height: 30px;
+        }
+      }
+    }
+    .buyButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width: $width-mobile) {
+      .buyButton {
+        height: 39px;
+      }
+    }
+  }
+  .productLabel {
+    background-color: $bgcolor-red;
+    position: absolute;
+    bottom: -20px;
+    left: 25%;
+    height: 122px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    transform: rotate(-20deg);
+    color: white;
+    width: 122px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-family: $font-family-nexa-bold;
+    @media screen and (max-width: $width-mobile) {
+      height: 60px;
+      width: 60px;
+      font-size: 12px;
+      bottom: -20px;
+      left: 6px;
+    }
+  }
+  .cartBox {
+    @media screen and (max-width: $width-mobile) {
+      background-image: url(../../../static/uploads/sprite_cart.svg);
+      .cartBoxCounter {
+        background-color: $bgcolor-red;
+        color: white;
+      }
+    }
+  }
+}
+
+.wrapCountGroup {
+  position: relative;
+  margin-bottom: 80px;
+  .foodButtonsGroupFluid {
+    margin: 0 auto 30px;
+    &:last-child {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: $width-mobile) {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    margin-bottom: 40px;
+  }
+}
+
+.productLabelsInfoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 560px;
+  width: 100%;
+  margin: 95px auto 0;
+  @media screen and (max-width: $width-mobile) {
+    margin: 50px auto 0;
+  }
+}
+
+.productLabelInfo {
+  text-align: center;
+  padding: 0 25px;
+  @media screen and (max-width: $width-mobile) {
+    padding: 0 12px;
+  }
+}
+
+.productLabelInfoIcon {
+  position: relative;
+  display: block;
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 25px;
+  svg {
+    display: inline-block;
+    fill: $bgcolor-red;
+    stroke: $bgcolor-red;
+    width: 60px;
+    height: 60px;
+    @media screen and (max-width: $width-mobile) {
+      width: 39px;
+      height: 39px;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    margin-bottom: 15px;
+  }
+}
+.productLabelInfoName {
+  position: relative;
+  color: $bgcolor-red;
+  font-size: 18px;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 12px;
+  }
+}

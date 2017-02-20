@@ -1,0 +1,334 @@
+@import "../../theme/forms.scss";
+
+.home {
+  height: 100%;
+  .doWeDeliver{
+    position: fixed;
+    bottom: 0;
+    background-color: #eee;
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    border-top: 1px solid #DBDBDB;
+    z-index: 10;
+    cursor: pointer;
+    a {
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px dashed #f1bebe;
+      font-size: 24px;
+      letter-spacing: 1px;
+      transition: all .25s;
+      &:hover {
+        border-bottom: transparent;
+      }
+    }
+     @media screen and (max-width: $width-mobile) {
+      background-color: #fff;
+      height: 44px;
+      line-height: 44px;
+      box-shadow: 1px 1px 5px #7f7f7f;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .wrapperProduct {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    max-width: 970px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    @include clearfix();
+    @media screen and (max-width: $width-mobile) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .productImage {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    max-height: 450px;
+    overflow: hidden;
+    img {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .productName {
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: $font-family-big-nodle-titling;
+    letter-spacing: 2px;
+      @media screen and (max-width: $width-mobile) {
+        line-height: 17px;
+        font-size: 20px;
+        margin-top: 7px;
+        margin-bottom: 5px;
+      }
+  }
+  .productSubName {
+    font-size: 20px;
+    color: #8e8e93;
+    text-align: center;
+      @media screen and (max-width: $width-mobile) {
+        font-size: 14px;
+        margin-top: 3px;
+      }
+  }
+  .buttonsBlock {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    @media screen and (max-width: $width-desktop) {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .button {
+      @extend .btnForm;
+      height: 50px;
+      line-height: 1;
+      &:hover,
+      &:active,
+      &:visited,
+      &:focus {
+        outline: none;
+      }
+      @media screen and (max-width: $width-mobile) {
+        height: 40px;
+        font-size: 16px;
+        padding: 0 5px 3px;
+      }
+    }
+    .detailsButton {
+      @extend .button;
+      color: $bgcolor-red;
+      background-color: transparent;
+      border: 1px solid $bgcolor-red;
+      transition: all .25s;
+      &:hover {
+        background-color: $bgcolor-red;
+        border-color: transparent;
+        color: white;
+      }
+    }
+    .buyButton {
+      @extend .button;
+      color: #fff;
+      width: 100%;
+      border: 1px solid transparent;
+      background-color: $bgcolor-red;
+      transition: all .25s;
+      &:hover {
+        background-color: white;
+        border-color: $bgcolor-red;
+        color: $bgcolor-red;
+      }
+      &:active{
+        background: $bgcolor-red;
+        color: #fff;
+      }
+      @media screen and (max-width: $width-mobile) {
+        margin-top: 5px;
+      }
+
+    }
+    .buyWithExtrasButton {
+      @extend .buyButton;
+      width: 65%;
+    }
+    .extrasButton {
+      @extend .button;
+      color: #fff;
+      width: 33%;
+      margin-left: 2%;
+      border: 1px solid transparent;
+      background-color: #000;
+      transition: all .25s;
+      &:hover {
+        background-color: white;
+        border-color: #000;
+        color: #000;
+      }
+      &:active{
+        background: #000;
+        color: #fff;
+      }
+      @media screen and (max-width: $width-mobile) {
+        margin-top: 5px;
+      }
+    }
+  }
+  .divider {
+    margin-top: 43px;
+    @media screen and (max-width: $width-mobile) {
+      background-color: #bebebe;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .whiteArea{
+      position: relative;
+      background-color: #fff;
+      margin-bottom: 50px;
+       @media screen and (max-width: $width-mobile) {
+        margin-bottom: 15px;
+      }
+    }
+  .productLabel {
+    background-color: $bgcolor-red;
+    position: absolute;
+    top: -100px;
+    left: 10%;
+    height: 122px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    transform: rotate(-20deg);
+    color: white;
+    width: 122px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-family: $font-family-nexa-bold;
+    @media screen and (max-width: $width-mobile) {
+      height: 65px;
+      width: 65px;
+      left: 5%;
+      top: -55px;
+      font-size: 10px;
+    }
+  }
+}
+
+
+.containerTransform {
+  position: relative;
+  height: 100%;
+  transform: translateY(100%);
+  opacity: 0;
+  background-color: white;
+  transition: all 1s ease;
+}
+
+.containerTransformOpen {
+  opacity: 1;
+  transform: none;
+  background-color: inherit;
+}
+
+.homeLogo {
+  display: block;
+  font-size: 0;
+  svg {
+    width: 97px;
+    height: 47px;
+    font-size: 0;
+    .logo-fill {
+      fill: $bgcolor-red;
+    }
+  }
+}
+
+.centerWrapBtn {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .extrasBtn {
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    height: 58px;
+    border: 1px solid transparent;
+    background-color: #000;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 0 5px 7px;
+    letter-spacing: 1px;
+    font-family: $font-family-big-nodle-titling;
+    color: white;
+    padding: 0 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+    transition: all .25s;
+    &:hover {
+      background-color: transparent;
+      border-color: #000;
+      color: #000;
+    }
+    @media screen and (max-width: $width-mobile) {
+      max-width: 100%;
+      height: 40px;
+      font-size: 16px;
+      padding: 0 5px 3px;
+    }
+  }
+}
+
+.arrowToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999999999;
+  border-radius: 3px;
+  cursor: pointer;
+  @media screen and (max-width: $width-mobile) {
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    bottom: 20px;
+    right: 15px;
+  }
+  .arrowIcon {
+    font-size: 0;
+    svg {
+      g {
+        path {
+          @media screen and (max-width: $width-mobile) {
+            fill: #000000;
+          }
+        }
+      }
+      opacity: 1;
+      &:hover {
+        opacity: 1;
+      }
+      width: 50px;
+      height: 50px;
+      @media screen and (max-width: $width-mobile) {
+        opacity: 1;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.arrowToTopWithIndent {
+  bottom: 50px;
+  @media screen and (max-width: $width-mobile) {
+    bottom: 45px;
+  }
+}

@@ -1,0 +1,362 @@
+@import "./variables.scss";
+
+.appMainBlue {
+  .checkoutBlockForm,
+  .checkoutGroup,
+  .checkoutInput {
+    border-color: $bgcolor-blue !important;
+  }
+  .checkoutBtn {
+    background-color: $bgcolor-blue !important;
+    &:hover {
+      background-color: transparent !important;
+      border-color: $bgcolor-blue !important;
+      color: $bgcolor-blue !important;
+    }
+  }
+  .headerRed {
+    background-color: $bgcolor-blue !important;
+    .headerBtnBack {
+      color: white !important;
+    }
+    .headerHumburgerItem {
+      color: white !important;
+    }
+    .headerTitle {
+      color: white !important;
+    }
+  }
+  .whiteBtn {
+    color: $bgcolor-blue !important;
+  }
+  .redBtn {
+    background-color: $bgcolor-blue !important;
+    &:hover {
+      background-color: transparent !important;
+      border-color: $bgcolor-blue !important;
+      color: $bgcolor-blue !important;
+    }
+  }
+  .transparentBtn {
+    border-color: $bgcolor-blue !important;
+    color:  $bgcolor-blue !important;
+    &:hover {
+      border-color: darken( $bgcolor-blue, 15% ) !important;
+      color: darken( $bgcolor-blue, 15% ) !important;
+    }
+  }
+  .sideBarContainer {
+    background-color: $bgcolor-blue !important;
+  }
+  .sidebarListLinkInd {
+    color: #fff;
+    user-select: auto;
+    &:hover {
+      color: rgba(white, 0.7);
+    }
+  }
+  .sidebarListLinkCatering {
+    color: rgba(white, 0.7);
+    user-select: none;
+  }
+  .headerTitle,
+  .headerHumburgerItem,
+  .headerBtnBack,
+  .navigationFilterItemActive {
+      color: $bgcolor-blue !important;
+  }
+  .navigationFilterItemActive:after {
+    background-color: $bgcolor-blue !important;
+  }
+  .navigationFilterItem {
+    &:hover {
+      color: $bgcolor-blue !important;
+    }
+  }
+  .home {
+    .buttonsBlock {
+      .buyWithExtrasButton {
+        background-color: $bgcolor-blue !important;
+      }
+      .detailsButton {
+        border-color : $bgcolor-blue !important;
+        color : $bgcolor-blue !important;
+      }
+      .buyButton {
+        background-color: $bgcolor-blue !important;
+      }
+    }
+    .doWeDeliver {
+      a {
+        border-color: rgba($bgcolor-blue, 0.7) !important;
+      }
+    }
+  }
+  .formGroup {
+    .inputGroup {
+      .inputError {
+        box-shadow: 0px 0px 12px 0px rgba($bgcolor-blue, 0.5) !important;
+      }
+      textarea,
+      input {
+        border-color : $bgcolor-blue !important;
+      }
+      .errorText {
+        color : $bgcolor-blue !important;
+      }
+    }
+  }
+  .formWrapper {
+    p {
+      color : $bgcolor-blue !important;
+    }
+  }
+  .login {
+    .errorAuth {
+      color : $bgcolor-blue !important;
+    }
+    .forgotPass {
+      a {
+        color : $bgcolor-blue !important;
+        border-color : $bgcolor-blue !important;
+      }
+    }
+  }
+  .checkbox [type="checkbox"]:checked + label:before {
+    background-color: $bgcolor-blue !important;
+  }
+  .viewCardCheckBox {
+    &:hover {
+      [type="radio"]:not(:checked) + label:before {
+        border-color: $bgcolor-blue !important;
+      }
+    }
+  }
+  .viewCardCheckBox [type="radio"]:checked + label:before {
+    background-color: $bgcolor-blue !important;
+  }
+  .viewCardLink {
+    color: $bgcolor-blue !important;
+    &:after {
+      background-color: $bgcolor-blue !important;
+    }
+  }
+  .cart {
+    .cartBoxCounter {
+      color: $bgcolor-blue !important;
+      background-color: white !important;
+    }
+  }
+
+  .cartBoxCounter {
+    background-color: $bgcolor-blue !important;
+    @media screen and (max-width: $width-mobile) {
+      color: $bgcolor-blue !important;
+      background-color: white !important;
+    }
+  }
+  .cartButton {
+    .cartBoxCounter {
+      @media screen and (max-width: $width-mobile) {
+        color: white !important;
+        background-color: $bgcolor-blue  !important;
+      }
+    }
+  }
+
+  .extras {
+    .extraItem {
+      hr {
+        background: rgba($bgcolor-blue, 0.7) !important;
+      }
+      .extrasButton {
+        background-color: $bgcolor-blue !important;
+        &:hover {
+          background-color: transparent !important;
+          border-color: $bgcolor-blue !important;
+          color: $bgcolor-blue !important;
+        }
+      }
+    }
+    .cartBoxCounter {
+      background-color: white !important;
+      color: $bgcolor-blue !important;
+    }
+    .filtersCaption {
+      .filters {
+        .activeFilter {
+          color: $bgcolor-blue !important;
+          border-color: $bgcolor-blue !important;
+        }
+        div {
+          &:hover {
+            color: $bgcolor-blue !important;
+          }
+        }
+      }
+    }
+  }
+  .timeSlider {
+    .rc-slider-dot {
+      background-color: $bgcolor-blue !important;
+    }
+    .rc-slider {
+      background-color: $bgcolor-blue !important;
+    }
+  }
+  .foodCount,
+  .foodPrice {
+    color : $bgcolor-blue !important;
+  }
+  .foodButtonsGroupFluid,
+  .foodButtonsGroup {
+    border-color: $bgcolor-blue !important;
+  }
+  .foodToggleButton {
+    background-color: $bgcolor-blue !important;
+    &:hover {
+      background-color: darken( $bgcolor-blue, 15% ) !important;
+    }
+  }
+  .footer {
+    background-color: $bgcolor-blue !important;
+  }
+  .productLabel {
+    background-color: $bgcolor-blue !important;
+  }
+  .productModify {
+    .sliderMain {
+      background: linear-gradient(to right, #ffffff 0%, $bgcolor-blue 100%) !important;
+    }
+    .switches {
+      border-color: $bgcolor-blue !important;
+      .switchBoolean {
+        color: $bgcolor-blue !important;
+      }
+      .switchActive {
+        background-color: $bgcolor-blue !important;
+      }
+    }
+    .buyButton {
+      background-color: $bgcolor-blue !important;
+      &:hover {
+        background-color: transparent !important;
+        color: $bgcolor-blue !important;
+        border-color: $bgcolor-blue !important;
+      }
+    }
+    .proteinSources {
+      .proteinBlock {
+        .protein {
+          background-color: $bgcolor-blue !important;
+          + span {
+            color : $bgcolor-blue !important;
+          }
+          &:hover {
+            background-color: $bgcolor-blue !important;
+          }
+        }
+        &:hover {
+          .unactiveProtein {
+            background-color: $bgcolor-blue !important;
+          }
+          span {
+            color : $bgcolor-blue !important;
+          }
+        }
+      }
+    }
+  }
+  .orderStatusCondition {
+    color : $bgcolor-blue !important;
+  }
+  .addressText {
+    border-color: rgba($bgcolor-blue, 0.7) !important;
+  }
+  .pageList {
+    .buttonRed {
+      background-color: $bgcolor-blue !important;
+    }
+  }
+  .icon {
+    svg {
+      fill: $bgcolor-blue !important;
+    }
+  }
+
+  svg {
+    .logo-fill {
+      fill: $bgcolor-blue !important;
+    }
+  }
+
+  .registerLinks {
+    a {
+      color : $bgcolor-blue !important;
+      border-color: $bgcolor-blue !important;
+      &:hover {
+        border-color: transparent !important;
+      }
+    }
+  }
+  .suggestionsWrapper {
+    .signInWrapper {
+      a {
+        color : $bgcolor-blue !important;
+        border-color: rgba($bgcolor-blue, 0.7) !important;
+      }
+    }
+  }
+  .navigationFilterMobileIcon {
+    color : $bgcolor-blue !important;
+  }
+  .eye {
+    svg {
+      fill: $bgcolor-blue !important;
+    }
+  }
+  .marker {
+    svg {
+      fill: $bgcolor-blue !important;
+    }
+  }
+  .formIconMarker {
+    svg {
+      fill: $bgcolor-blue !important;
+    }
+  }
+  .modalInfoClose {
+    &:after,
+    &:before {
+      background-color: $bgcolor-blue;
+    }
+    &:hover {
+      &:after,
+      &:before {
+        background-color: darken( $bgcolor-blue, 15% );
+      }
+    }
+  }
+  .aboutCatering {
+    h1 {
+      color: $bgcolor-blue;
+    }
+  }
+  .productLabelInfoIcon {
+    svg {
+      fill: $bgcolor-blue;
+      stroke: $bgcolor-blue;
+    }
+  }
+  .productLabelInfoName {
+    color: $bgcolor-blue;
+  }
+  .orderHistoryCart {
+    &:after {
+      border-color: $bgcolor-blue !important;
+    }
+  }
+  .redNotification {
+    color: $bgcolor-blue !important;
+  }
+}

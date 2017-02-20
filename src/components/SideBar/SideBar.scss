@@ -1,0 +1,190 @@
+@import "../../theme/forms.scss";
+
+.sideBarContainer {
+  z-index: 999999;
+  background: $bgcolor-red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pageList {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  padding: 40px 0;
+  max-width: 600px;
+  width: 80%;
+  @media screen and (max-width: $width-mobile) {
+    padding: 0 15px;
+  }
+}
+.sidebarList {
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+.sidebarListItem {
+  position: relative;
+  list-style: none;
+  margin-bottom: 48px;
+  @media screen and (max-width: $width-mobile) {
+      margin-bottom: 32px;
+  }
+}
+.doubleLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.sidebarListLink {
+  cursor: pointer;
+  cursor: hand;
+  color: #fff;
+  font-size: 48px;
+  line-height: 1;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: all .25s;
+  font-family: $font-family-big-nodle-titling;
+  &:visited,
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: rgba(white, 0.7);
+  }
+  @media screen and (max-width: $width-mobile) {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+}
+
+.sidebarListLinkInd {
+  @extend .sidebarListLink;
+  color: rgba(white, 0.7);
+  user-select: none;
+}
+.sidebarListLinkCatering {
+  @extend .sidebarListLink;
+  color:white;
+  user-select: auto;
+}
+.linkMore {
+  @extend .sidebarListLink;
+  font-size: 20px;
+  line-height: 28px;
+  border-bottom: 1px solid white;
+  text-transform: none;
+  &:hover {
+    color: white;
+    border-color: transparent
+  }
+  @media screen and (max-width: $width-mobile) {
+      font-size: 14px;
+      line-height: 18px;
+  }
+}
+.buttonRed {
+  @extend .redBtn;
+  width: 180px;
+  border: 1px solid #fff;
+  height: 59px;
+  border-radius: 5px;
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+  }
+  @media screen and (max-width: $width-mobile) {
+    height: 40px;
+    width: 150px;
+    font-size: 16px;
+    border-radius: 0;
+    padding: 0 5px 3px;
+  }
+}
+.sidebarFixedContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.signHeaderWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.signHeaderLogo {
+  position: relative;
+  font-size: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  svg {
+    width: 267px;
+    height: 234px;
+    font-size: 0;
+  }
+  @media screen and (max-width: $width-mobile) {
+    svg {
+      width: 100px;
+      height: 80px;
+    }
+  }
+}
+
+.signHeaderWrapButtons {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+  button {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .whiteBtn {
+    &:hover {
+      border-color: white;
+      background-color: transparent;
+      color: white;
+    }
+  }
+  .redBtn {
+    &:hover {
+      border-color: white;
+      color: white;
+      background-color: transparent;
+    }
+    @media screen and (max-width: $width-mobile) {
+      border-color: white;
+    }
+  }
+}

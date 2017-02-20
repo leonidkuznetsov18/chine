@@ -1,0 +1,67 @@
+@import "../../theme/variables.scss";
+
+.agreementContent {
+    margin-top:50px;
+    text-align: justify;
+    h3 {
+      font-weight: bold;
+    }
+    h2:first-child {
+      text-align: center;
+    }
+    word-wrap: break-word;
+}
+
+.aboutCatering {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+  h1 {
+    color: $bgcolor-red;
+    font-family: $font-family-nexa-bold;
+    font-size: 34px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    @media screen and (max-width: $width-mobile) {
+      font-size: 18px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  p {
+    text-align: left;
+    color: #000;
+    font-size: 16px;
+    @media screen and (max-width: $width-mobile) {
+      font-size: 14px;
+    }
+  }
+  .contacts {
+    position: relative;
+    margin-top: 40px;
+    @media screen and (max-width: $width-mobile) {
+      margin-top: 20px;
+    }
+  }
+  .contactsLink {
+    position: relative;
+    display: inline-block;
+    font-size: 42px;
+    color: #000;
+    border-bottom: 1px solid #D6D6D6;
+    margin-bottom: 20px;
+    transition: all .25s;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      border-color: transparent;
+      text-decoration: none;
+    }
+    @media screen and (max-width: $width-mobile) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+}

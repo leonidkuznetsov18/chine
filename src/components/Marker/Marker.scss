@@ -1,0 +1,14 @@
+@import "../../theme/variables.scss";
+
+.marker {
+  display: block;
+  width: 14px;
+  height: 20px;
+  font-size: 0;
+  svg {
+    width: 14px;
+    height: 20px;
+    font-size: 0;
+    fill: $bgcolor-red;
+  }
+}

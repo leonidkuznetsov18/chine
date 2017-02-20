@@ -1,0 +1,205 @@
+@import "./variables.scss";
+@import "./forms.scss";
+
+.foodTable {
+  position: relative;
+}
+
+.foodRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: $width-mobile) {
+    padding-right: 10px;
+  }
+}
+
+.foodName {
+  position: relative;
+  color: #000;
+  font-family: $font-family-nexa-light;
+  font-size: 33px;
+  margin-bottom: 10px;
+  @media screen and (max-width: $width-mobile) {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}
+
+.foodConsist {
+  position: relative;
+  font-family: $font-family-nexa-light;
+  color: #8E8E93;
+  font-size: 24px;
+  margin-bottom: 10px;
+  @media screen and (max-width: $width-mobile) {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+}
+
+.foodPrice {
+  position: relative;
+  font-size: 24px;
+  font-family: $font-family-nexa-light;
+  color: #FE0000;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 12px;
+  }
+}
+
+.foodCount {
+  position: relative;
+  font-size: 33px;
+  color: #fe0000;
+  display: block;
+  text-align: right;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 16px;
+  }
+}
+
+.foodNameWrap {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  &:after {
+    content: '';
+    height: 1px;
+    max-width: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #BEBEBE;
+  }
+  @media screen and (max-width: $width-mobile) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.foodNameWrapPointer {
+  @extend .foodNameWrap;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.foodRowWrap {
+  position: relative;
+}
+
+.foodCol {
+  position: relative;
+  width: 50%;
+}
+
+.foodCutlery{
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: $width-mobile) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+   }
+}
+
+.foodIcon {
+  position: relative;
+  display: block;
+  margin-right: 28px;
+  svg {
+    width: 85px;
+    height: 85px;
+     @media screen and (max-width: $width-mobile) {
+      width: 42px;
+      height: 42px;
+     }
+  }
+}
+
+.foodCutleryName {
+  position: relative;
+  color: #000;
+  font-family: $font-family-nexa-light;
+  font-size: 33px;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 16px;
+  }
+}
+
+.foodButtonsGroup {
+  position: relative;
+  height: 35px;
+  line-height: 35px;
+  width: 160px;
+  border-radius: 4px;
+  margin-left: auto;
+  overflow: hidden;
+  user-select: none;
+  @media screen and (max-width: $width-mobile) {
+    width: 100px;
+    height: 24px;
+  }
+}
+
+.foodButtonsGroupFluid {
+  position: relative;
+  height: 58px;
+  max-width: 370px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  @media screen and (max-width: $width-mobile) {
+    height: 40px;
+  }
+}
+
+.foodInputNum {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  padding: 0 5px;
+  outline: none;
+  display: inline-block;
+  border-top: 1px solid $bgcolor-red;
+  border-bottom: 1px solid $bgcolor-red;
+  vertical-align: top;
+  -webkit-appearance: none;
+  border-radius:0;
+  user-select: none;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 14px;
+    padding: 0 2px;
+    line-height: 24px;
+  }
+}
+.foodToggleButton {
+  position: relative;
+  width: 35%;
+  border: none;
+  background-color: $bgcolor-red;
+  height: 100%;
+  font-family: $font-family-nexa-bold;
+  font-size: 34px;
+  color: white;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  transition: all .25s;
+  &:hover {
+    background: darken($bgcolor-red, 15%);
+  }
+  @media screen and (max-width: $width-mobile) {
+    font-size: 14px;
+    padding: 0;
+    line-height: 24px;
+  }
+}

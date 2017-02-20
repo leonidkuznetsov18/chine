@@ -1,0 +1,46 @@
+@import "../../theme/variables.scss";
+.register {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: $width-mobile) {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+.registerWrap {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  @media screen and (max-width: $width-mobile) {
+    padding: 0 15px;
+    margin-top: auto;
+    margin-bottom: 50px;
+  }
+}
+.registerLinks {
+  text-align: center;
+  margin-top: 34px;
+  @media screen and (min-width: $width-mobile) {
+    margin-top: 50px;
+  }
+  a {
+    font-size: 10pt;
+    color: $bgcolor-red;
+    display: inline;
+    border-bottom: 1px solid $bgcolor-red;
+    cursor: pointer;
+    cursor: hand;
+    @media screen and (min-width: $width-mobile) {
+      font-size: 13pt;
+    }
+  }
+  a:hover{
+      text-decoration: none;
+  }
+  a:focus{
+    text-decoration: none;
+  }
+}

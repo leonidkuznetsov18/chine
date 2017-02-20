@@ -1,0 +1,145 @@
+@import "../../theme/humburger.scss";
+@import "../../theme/cart.scss";
+
+.header {
+  position: relative;
+  height: 80px;
+  background-color: $bgcolor;
+  border-bottom: 1px solid #DBDBDB;
+  transition: all .5s;
+  visibility: visible;
+  opacity: 1;
+  .headerBtnBack {
+    color: $bgcolor-red;
+  }
+  .headerTitle {
+    color: $bgcolor-red;
+  }
+  .headerHumburgerItem {
+    color: $bgcolor-red;
+  }
+  @media screen and (max-width: $width-mobile) {
+    height: 44px;
+  }
+}
+
+.headerHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.headerRed {
+  background-color: $bgcolor-red;
+  border-bottom: none;
+  .headerBtnBack {
+    color: white;
+  }
+  .headerHumburgerItem {
+    color: white;
+  }
+  .headerTitle {
+    color: white;
+  }
+}
+
+.headerTransparent {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.headerWrapper {
+  position: relative;
+  max-width: 970px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: $width-mobile) {
+    text-align: center;
+  }
+}
+
+.headerTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: currentColor;
+  text-transform: uppercase;
+  font-family: $font-family-big-nodle-titling;
+  span {
+    padding-bottom: 14px;
+    display: block;
+    &.homeLogo {
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    font-size: 24px;
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    span {
+      padding-bottom: 8px;
+    }
+  }
+}
+
+.renderLeftButton {
+  position: relative;
+  z-index: 999;
+}
+.headerBtnBack {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 0;
+  &:hover {
+    .headerBtnBackIcon {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.headerBtnBackIcon {
+  position: relative;
+  margin-right: 23px;
+  display: block;
+  align-self: center;
+  transition: all .25s ease;
+  svg {
+    font-size: 0;
+    display: block;
+    width: 22px;
+    height: 30px;
+    fill: currentColor;
+  }
+  @media screen and (max-width: $width-mobile) {
+    margin-right: 12px;
+    svg {
+      position: relative;
+      width: 6px;
+      height: 14px;
+    }
+  }
+}
+
+.headerBtnBackText {
+  color: currentColor;
+  font-size: 34px;
+  font-family: $font-family-nexa-light;
+  height: 28px;
+  user-select: none;
+  @media screen and (max-width: $width-mobile) {
+    font-size: 17px;
+    height: 14px;
+  }
+}

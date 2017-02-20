@@ -1,0 +1,78 @@
+@import "../../theme/forms.scss";
+
+.login {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: $width-mobile) {
+    min-height: 100vh;
+    height: 100%;
+  }
+  .registerLinks {
+    text-align: center;
+    margin-top: 39px;
+    @media screen and (max-width: $width-mobile) {
+      margin-top: 32px;
+    }
+    a {
+      color: $bgcolor-red;
+    }
+  }
+  .forgotPass {
+    color: $bgcolor-red;
+    text-align: center;
+    font-size: 12.5pt;
+    margin-top: 34px;
+    margin-bottom: 35px;
+    cursor: pointer;
+     a {
+      color: $bgcolor-red;
+      border-bottom: 1px solid $bgcolor-red;
+      text-decoration: none;
+      transition: all .25s;
+      &:hover {
+        text-decoration: none;
+        border-bottom: transparent;
+      }
+      @media screen and (max-width: $width-mobile) {
+        font-size: 14px;
+      }
+    }
+    @media screen and (max-width: $width-mobile) {
+      margin-top: 15px;
+      margin-bottom: 21px;
+    }
+  }
+  .errorAuth {
+    text-align: center;
+    color:#fe0000;
+  }
+}
+.loginFormWrap{
+    max-width: 370px;
+    width: 100%;
+    margin: auto;
+    @media screen and (max-width: $width-mobile) {
+      padding: 0 15px;
+      margin-bottom: 50px;
+    }
+}
+
+.loginLogo {
+  position: relative;
+  font-size: 0;
+  text-align: center;
+  svg {
+    width: 267px;
+    height: 234px;
+    font-size: 0;
+  }
+  @media screen and (max-width: $width-mobile) {
+    svg {
+      width: 200px;
+      height: 160px;
+    }
+  }
+}

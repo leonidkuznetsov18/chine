@@ -1,0 +1,28 @@
+@import "../../theme/variables.scss";
+
+.forgotPassword {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.forgotPasswordLogo {
+  position: relative;
+  font-size: 0;
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 267px;
+    height: 234px;
+    font-size: 0;
+  }
+  @media screen and (max-width: $width-mobile) {
+    svg {
+      width: 200px;
+      height: 160px;
+    }
+  }
+}

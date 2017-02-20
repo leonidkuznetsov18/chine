@@ -1,0 +1,19 @@
+{
+  "name": "tso-universal-app",
+  "description": "Universal nodejs application",
+  "repository": "git@bitbucket.org:tsodelivery/universal-app.git",
+  "logo": "",
+  "keywords": [
+    "react",
+    "isomorphic",
+    "universal",
+    "webpack",
+    "express",
+    "hot reloading",
+    "react-hot-reloader",
+    "redux",
+    "starter",
+    "boilerplate",
+    "babel"
+  ]
+}

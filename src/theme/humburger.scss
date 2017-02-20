@@ -1,0 +1,98 @@
+@import "./variables.scss";
+
+.headerHumburger {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 27px;
+  transform: translateY(-50%) rotate(0deg);
+  transition: .3s ease;
+  cursor: pointer;
+  cursor: hand;
+  &:hover {
+    .headerHumburgerItem {
+      border: 1px solid currentColor;
+      background-color: transparent;
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    height: 13px;
+    width: 20px;
+  }
+}
+
+.headerHumburgerItem {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: currentColor;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  &:nth-child(1) {
+    top: 0px;
+  }
+  &:nth-child(2) {
+    top: 11px;
+  }
+  &:nth-child(3) {
+    top: 22px;
+  }
+  @media screen and (max-width: $width-mobile) {
+    height: 3px;
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2) {
+      top: 5px;
+    }
+    &:nth-child(3) {
+      top: 10px;
+    }
+  }
+}
+
+.headerHumburgerOpen {
+  @extend .headerHumburger;
+  &:hover {
+    transform: translateY(-50%) rotate(90deg);
+    .headerHumburgerItem {
+      border: 1px solid transparent;
+      background-color: currentColor;
+    }
+  }
+  .headerHumburgerItem {
+    &:nth-child(1) {
+      top: 11px;
+      transform: rotate(135deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      left: -40px;
+    }
+    &:nth-child(3) {
+      top: 11px;
+      transform: rotate(-135deg);
+    }
+  }
+  @media screen and (max-width: $width-mobile) {
+    .headerHumburgerItem {
+      &:nth-child(1) {
+        top: 5px;
+        transform: rotate(135deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        left: -20px;
+      }
+      &:nth-child(3) {
+        top: 5px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}

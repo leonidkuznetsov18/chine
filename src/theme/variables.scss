@@ -1,0 +1,31 @@
+@import './fonts.scss';
+
+$bgcolor: #E6E8EB;
+$bgcolor-red: #fe0000;
+$bgcolor-blue: #007AFF;
+// Custom Colors
+$cyan: #33e0ff;
+$humility: #777;
+
+$width-mobile: 768px;
+$width-desktop: 992px;
+$width-desktop-large: 1200px;
+
+$text-color: #333;
+
+$font-size-base: 14px;
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-nexa-light: 'NexaLight';
+$font-family-nexa-bold: 'NexaBold';
+$font-family-big-nodle-titling: 'BigNoodleTitling';
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

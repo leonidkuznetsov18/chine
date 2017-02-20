@@ -1,0 +1,112 @@
+@import "../../theme/forms.scss";
+
+.addressForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .autocompleteWrapper {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    @media screen and (max-width: $width-mobile) {
+      margin-bottom: 5px;
+    }
+    button {
+      position: absolute;
+      font-family: $font-family-big-nodle-titling;
+      padding-bottom: 5px;
+      border-radius: 3px;
+      height: 44px;
+      width: 100px;
+      top: 7px;
+      right: 0;
+      background-color: transparent;
+      border: 1px solid #dbdbdb;
+      outline: none;
+      user-select: none;
+      @media screen and (max-width: $width-mobile) {
+        width: 70px;
+        height: 35px;
+        padding-bottom: 6px;
+      }
+    }
+  }
+  .autocompleteInput {
+    width: 100%;
+    height: 59px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 14px;
+    border: transparent;
+    border-bottom: 1px solid #dbdbdb;
+    outline: none;
+    &::-ms-clear {
+      display: none;
+    }
+    @media screen and (max-width: $width-mobile) {
+      border-color: transparent;
+    }
+  }
+  .autocompleteInputActive {
+    padding-right: 0;
+  }
+  .formWrapper {
+    position: relative;
+    p {
+      color: $bgcolor-red;
+      text-align: center;
+    }
+  }
+  .formDivider {
+    height: 60px;
+    @media screen and (max-width: $width-mobile) {
+      height: 0;
+    }
+  }
+  .addressFormCart {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  .wrapBottomControl {
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    .redBtn {
+      position: relative;
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .iconLocate {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0;
+        svg {
+          width: 16px;
+          height: 16px;
+          fill: white;
+          transition: fill .25s ease;
+          @media screen and (max-width: $width-mobile) {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+      &:hover {
+        .iconLocate {
+          svg {
+            fill: $bgcolor-red;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "apps" : [{
+    "name"        : "tso-main",
+    "script"      : "./bin/server.js",
+    "watch"       : false,
+    "node_args"   : "",
+    "merge_logs"  : true,
+    "cwd"         : "/var/www/tso-main/",
+    "env": {
+      "NODE_PATH": "./src",
+      "NODE_ENV": "production",
+      "PORT": 8080,
+      "APIPORT": 3030
+    },
+    "env_dev" : {
+      "NODE_PATH": "./src",
+      "NODE_ENV": "dev-server",
+      "PORT": 8080,
+      "APIPORT": 3030
+    },
+    "env_preproduction" : {
+      "NODE_PATH": "./src",
+      "NODE_ENV": "preproduction",
+      "PORT": 8080,
+      "APIPORT": 3030
+    }
+  },{
+  "name"        : "tso-api",
+  "script"      : "./bin/api.js",
+  "watch"       : false,
+  "node_args"   : "",
+  "merge_logs"  : true,
+  "cwd"         : "/var/www/tso-main/",
+  "env": {
+    "NODE_PATH": "./api",
+    "NODE_ENV": "production",
+    "PORT": 8080,
+    "APIPORT": 3030
+  },
+  "env_dev" : {
+    "NODE_PATH": "./api",
+    "NODE_ENV": "dev-server",
+    "PORT": 8080,
+    "APIPORT": 3030
+  },
+  "env_preproduction" : {
+    "NODE_PATH": "./api",
+    "NODE_ENV": "preproduction",
+    "PORT": 8080,
+    "APIPORT": 3030
+  }
+  }]
+}

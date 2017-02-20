@@ -1,0 +1,300 @@
+@import "../../theme/variables.scss";
+
+.timeSlider {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+
+  .rc-slider {
+    padding: 0px 53px;
+    border-radius: 4px;
+    width: 110%;
+    margin-left: -5%;
+    height: 44px;
+    background: $bgcolor-red;
+    @media screen and (max-width: $width-mobile) {
+      height: 34px;
+      padding: 0px 20px;
+      width: 115%;
+      margin-left: -7%;
+    }
+  }
+
+  .rc-slider * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .rc-slider-track {
+    position: absolute;
+    left: 0;
+    height: 44px;
+    border-radius: 4px;
+    @media screen and (max-width: $width-mobile) {
+      height: 25px;
+    }
+  }
+
+  .handleWrapper {
+    position: absolute;
+    top: 50%;
+    .rc-slider-tooltip-arrow {
+      width: 10px;
+      height: 10px;
+      content: '';
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      margin-left: -6px;
+      border-width: 6px 6px 0;
+      background-color: #000;
+      transform: rotate(45deg)
+    }
+    .rc-slider-tooltip-arrow.tooltip-arrow-first {
+      background-color: #006CC3;
+    }
+    .rc-slider-tooltip {
+      position: absolute;
+      bottom: 30px;
+      left: -25px;
+      padding: 4px 10px 10px;
+      min-width: 24px;
+      font-size: 22px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      background-color: #000;
+      font-family: $font-family-big-nodle-titling;
+      border-radius: 4px;
+      white-space: nowrap;
+      @media screen and (max-width: $width-mobile) {
+        font-size: 18px;
+        left: -50px;
+      }
+    }
+    .rc-slider-tooltip.tooltip-first {
+      background-color: #006CC3;
+      @media screen and (max-width: $width-mobile) {
+        left: -15px;
+      }
+    }
+    .rc-slider-tooltip.tooltip-last {
+      left: -86px;
+      @media screen and (max-width: $width-mobile) {
+        left: -100px;
+      }
+    }
+    .rc-slider-handle {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 65px;
+      height: 46px;
+      cursor: pointer;
+      cursor: hand;
+      border-radius: 4px;
+      background-color: #000000;
+      z-index: 10;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        background: url(./arrow.png) no-repeat center center;
+        background-size: cover;
+        width: 24px;
+        height: 11px;
+      }
+      @media screen and (max-width: $width-mobile) {
+        width: 52px;
+        height: 36px;
+      }
+    }
+
+    .rc-slider-handle:hover {
+      border-color: #57c5f7;
+    }
+
+    .rc-slider-handle-active:active {
+      border-color: #57c5f7;
+      box-shadow: 0 0 5px #57c5f7;
+    }
+  }
+
+  .rc-slider-mark {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: $font-family-nexa-light;
+    @media screen and (max-width: $width-mobile) {
+      font-size: 14px;
+    }
+  }
+
+  .rc-slider-mark-text {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    cursor: hand;
+    color: #000;
+    white-space: nowrap;
+    font-family: $font-family-big-nodle-titling;
+    user-select: none;
+    &:after{
+      content: "";
+      position: absolute;
+      top: -47px;
+      left:50%;
+      width: 1px;
+      height: 30px;
+      background-color: #fff;
+      @media screen and (max-width: $width-mobile) {
+        top: -40px;
+        height: 26px;
+      }
+    }
+  }
+
+  .rc-slider-mark-text-active {
+    color: #000;
+  }
+
+  .rc-slider-step {
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    @media screen and (max-width: $width-mobile) {
+      height: 25px;
+    }
+  }
+
+  .rc-slider-dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 32px;
+    background-color: $bgcolor-red;
+    position: absolute;
+    bottom: -2px;
+    margin-left: -4px;
+    vertical-align: middle;
+    @media screen and (max-width: $width-mobile) {
+      height: 20px;
+    }
+  }
+
+  .rc-slider-dot:first-child {
+    margin-left: -4px;
+  }
+
+  .rc-slider-dot:last-child {
+    margin-left: -4px;
+  }
+
+  .rc-slider-dot-active {
+    border-color: $bgcolor-red;
+  }
+
+  .rc-slider-disabled {
+    background-color: #e9e9e9;
+  }
+
+  .rc-slider-disabled .rc-slider-track {
+    background-color: #ccc;
+  }
+
+  .rc-slider-disabled .rc-slider-handle,
+  .rc-slider-disabled .rc-slider-dot {
+    border-color: #ccc;
+    background-color: #fff;
+    cursor: not-allowed;
+  }
+
+  .rc-slider-disabled .rc-slider-mark-text,
+  .rc-slider-disabled .rc-slider-dot {
+    cursor: not-allowed !important;
+  }
+
+  .rc-slider-vertical {
+    width: 4px;
+    height: 100%;
+  }
+
+  .rc-slider-vertical .rc-slider-track {
+    bottom: 0;
+    width: 4px;
+  }
+
+  .rc-slider-vertical .rc-slider-handle {
+    position: absolute;
+    margin-left: -5px;
+    margin-bottom: -7px;
+  }
+
+  .rc-slider-vertical .rc-slider-mark {
+    top: 0;
+    left: 10px;
+    height: 100%;
+  }
+
+  .rc-slider-vertical .rc-slider-step {
+    height: 100%;
+    width: 4px;
+  }
+
+  .rc-slider-vertical .rc-slider-dot {
+    left: 2px;
+    margin-bottom: -4px;
+  }
+
+  .rc-slider-vertical .rc-slider-dot:first-child {
+    margin-bottom: -4px;
+  }
+
+  .rc-slider-vertical .rc-slider-dot:last-child {
+    margin-bottom: -4px;
+  }
+
+}
+
+.inactiveBackground {
+  background: url(./stripe.png);
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+@keyframes rcSliderTooltipZoomDownIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 100%;
+    transform: scale(0, 0);
+  }
+  100% {
+    transform-origin: 50% 100%;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes rcSliderTooltipZoomDownOut {
+  0% {
+    transform-origin: 50% 100%;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 100%;
+    transform: scale(0, 0);
+  }
+}

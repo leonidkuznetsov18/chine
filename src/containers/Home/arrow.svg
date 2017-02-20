@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>backtotop1@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="product" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,2.99653242 C0,1.34159326 1.33737922,0 2.99653242,0 L47.0034676,0 C48.6584067,0 50,1.33737922 50,2.99653242 L50,47.0034676 C50,48.6584067 48.6626208,50 47.0034676,50 L2.99653242,50 C1.34159326,50 0,48.6626208 0,47.0034676 L0,2.99653242 Z M38.6015625,26.0859375 L25.59375,13.078125 L25.59375,41.203125 L23.484375,41.203125 L23.484375,13.078125 L10.4765625,26.0859375 L9,24.5390625 L24.5390625,9 L40.078125,24.5390625 L38.6015625,26.0859375 Z" id="backtotop1" fill="#FF0000"></path>
+    </g>
+</svg>

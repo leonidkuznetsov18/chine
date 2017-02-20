@@ -1,0 +1,167 @@
+@import "../../theme/foodTable.scss";
+@import "../../theme/cart.scss";
+@import "../../theme/variables.scss";
+
+.extras {
+  position: relative;
+  text-align: center;
+  .cartBox {
+    background-image: url(../../../static/uploads/sprite_cart_white.svg);
+  }
+  .cartBoxCounter {
+    background-color: white;
+    color: $bgcolor-red;
+  }
+  .extraItem {
+    position: relative;
+    background-color: white;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    @media screen and (max-width: $width-mobile) {
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+    }
+
+    p {
+      font-size: 15px;
+      margin-top: 9px;
+      font-size: 24px;
+      margin-bottom: 13px;
+      font-family: $font-family-big-nodle-titling;
+      @media screen and (max-width: $width-mobile) {
+        margin-top: 13px;
+        font-size: 16px;
+      }
+    }
+    .extrasButton {
+      padding: 0 5px 7px;
+      font-size: 16px;
+      border: none;
+      height: 28px;
+      border-radius: 2px;
+      letter-spacing: 0.7px;
+      border: 1px solid transparent;
+      background-color: $bgcolor-red;
+      font-family: $font-family-big-nodle-titling;
+      color: white;
+      width: 150px;
+      outline: none;
+      transition: all .25s;
+      &:hover,
+      &:active,
+      &:visited,
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $bgcolor-red;
+        color: $bgcolor-red;
+      }
+      @media screen and (max-width: $width-mobile) {
+        width: 100%;
+        height: 40px;
+        padding: 0 5px 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .filtersCaption {
+    position: relative;
+    background-color: $bgcolor;
+    i {
+      color: $bgcolor-red;
+      font-size: 18px;
+    }
+    .filters {
+      div {
+        height: 64px;
+        line-height: 64px;
+        float: left;
+        color: black;
+        font-size: 18px;
+        transition: all .25s;
+        &:hover {
+          color: $bgcolor-red;
+        }
+        @media screen and (max-width: $width-mobile) {
+          height: 44px;
+          line-height: 44px;
+          float: left;
+          font-size: 16px;
+        }
+      }
+      .activeFilter {
+        color: $bgcolor-red;
+        border-bottom: 2px solid $bgcolor-red;
+        @media screen and (max-width: $width-mobile) {
+          color: $bgcolor-red;
+          border-bottom: 2px solid $bgcolor-red;
+        }
+      }
+    }
+    @media screen and (max-width: $width-mobile) {
+      border-bottom: 2px solid #dbdbdb;
+    }
+  }
+  .divider {
+    height: 1px;
+    line-height: 1px;
+    font-size: 0;
+    margin-top: 43px;
+    background-color: $bgcolor-red;
+    @media screen and (max-width: $width-mobile) {
+      background-color: #bebebe;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .buttonsBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $width-mobile) {
+      padding: 0 10px;
+    }
+    .foodButtonsGroupFluid {
+      height: 28px;
+      width: 150px;
+      margin-bottom: 8px;
+      @media screen and (max-width: $width-mobile) {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+      }
+      .foodToggleButton {
+        font-size: 18px;
+        width: 30px;
+        @media screen and (max-width: $width-mobile) {
+          width: 40px;
+          font-size: 24px;
+        }
+      }
+      .foodInputNum {
+        font-size: 18px;
+        padding: 0 8px;
+        width: calc(100% - 60px);
+        @media screen and (max-width: $width-mobile) {
+          width: calc(100% - 80px);
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .wrapExtrasItems {
+    position: relative;
+    margin-top: 40px;
+    @media screen and (max-width: $width-mobile) {
+      margin-top: 20px;
+    }
+  }
+}

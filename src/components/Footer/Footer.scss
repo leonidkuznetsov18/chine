@@ -1,0 +1,10 @@
+@import "../../theme/variables.scss";
+
+.footer {
+  background: $bgcolor-red;
+  height: 80px;
+  position: relative;
+  @media screen and (max-width: $width-mobile) {
+    display: none;
+  }
+}
